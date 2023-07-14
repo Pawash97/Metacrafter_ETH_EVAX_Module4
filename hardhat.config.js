@@ -29,16 +29,16 @@ module.exports = {
       url: "https://api.avax-test.network/ext/bc/C/rpc",
       gasPrice: 225000000000,
       chainId: 43113,
-      accounts: ["55b6b26cf72c483e6fb9dfa18dd67482c474b8a28835b97ddf449bd8181addaa"], // we use a .env file to hide our wallets private key
+      accounts: [process.env.WALLET_PRIVATE_KEY], // we use a .env file to hide our wallets private key
     },
     mainnet: {
       url: "https://api.avax.network/ext/bc/C/rpc",
       gasPrice: 225000000000,
       chainId: 43114,
-      accounts: ["55b6b26cf72c483e6fb9dfa18dd67482c474b8a28835b97ddf449bd8181addaa"],
+      accounts: [process.env.WALLET_PRIVATE_KEY], // we use a .env file to hide our wallets private key
     },
   },
   etherscan: {
-    apiKey: "VT83Z7EBW9HS2INRUW66BEKAWE15SDZAT8", // we use an .env file to hide our Snowtrace API KEY
+    apiKey: process.env.SNOWTRACE_API_KEY, // we use an .env file to hide our Snowtrace API KEY
   },
 };
